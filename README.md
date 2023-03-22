@@ -1,4 +1,4 @@
-
+![success](https://github.com/gorillatechrepo/AKAssignment/blob/main/Success.PNG)
 This task was quite enjoyable, albeit it presented a few challenges during deployment.
 
 # Deployment Issues
