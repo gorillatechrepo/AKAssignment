@@ -1,6 +1,6 @@
 # Create LB EC2 instances
 resource "aws_instance" "app_lb" {
-  ami           = "ami-0c55b159cbfafe1f0"  # Ubuntu 18.04 as 16 is End of Support and no longer available
+  ami           = var.instance_ami  # Ubuntu 18.04 as 16 is End of Support and no longer available
   instance_type = var.instance_type
   key_name = "${var.ami_key_pair_name}"
     tags = {
@@ -15,7 +15,7 @@ resource "aws_instance" "app_lb" {
 
 # Create WEB EC2 instances
 resource "aws_instance" "app_web" {
-  ami           = "ami-0c55b159cbfafe1f0"  # Ubuntu 18.04 as 16 is End of Support and no longer available
+  ami           = var.instance_ami  # Ubuntu 18.04 as 16 is End of Support and no longer available
   instance_type = var.instance_type
   key_name = "${var.ami_key_pair_name}"
     tags = {
@@ -30,7 +30,7 @@ resource "aws_instance" "app_web" {
 
 # Create DB EC2 instances
 resource "aws_instance" "app_db" {
-  ami           = "ami-0c55b159cbfafe1f0"  # Ubuntu 18.04 as 16 is End of Support and no longer available
+  ami           = var.instance_ami  # Ubuntu 18.04 as 16 is End of Support and no longer available
   instance_type = var.instance_type
   key_name = "${var.ami_key_pair_name}"
     tags = {
