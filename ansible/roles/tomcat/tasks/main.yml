@@ -10,14 +10,14 @@
 
   - name: Install package
     apt:
-      name: tomcat8
+      name: tomcat9
       update_cache: yes
       state: present
     become: yes
 
   - name: Create App directory
     file:
-      path: /var/lib/tomcat8/webapps/{{ app_name }}
+      path: /var/lib/tomcat9/webapps/{{ app_name }}
       state: directory
       mode: 0755
     become: yes
@@ -25,7 +25,7 @@
   - name: Copy index.jsp
     template:
       src: index.jsp.j2
-      dest: /var/lib/tomcat8/webapps/{{ app_name }}/index.jsp
+      dest: /var/lib/tomcat9/webapps/{{ app_name }}/index.jsp
     notify: restart tomcat
     become: yes
 
@@ -34,8 +34,8 @@
       src: "{{ item.src }}"
       dest: "{{ item.dest }}"
     with_items:
-      - { src: "WEB-INF", dest: "/var/lib/tomcat8/webapps/{{ app_name }}" }
-      - { src: "setenv.sh", dest: "/usr/share/tomcat8/bin/setenv.sh" }
+      - { src: "WEB-INF", dest: "/var/lib/tomcat9/webapps/{{ app_name }}" }
+      - { src: "setenv.sh", dest: "/usr/share/tomcat9/bin/setenv.sh" }
     notify: restart tomcat
     become: yes
 

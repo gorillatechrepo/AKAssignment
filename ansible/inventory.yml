@@ -3,17 +3,17 @@ Accounting:
     db_servers:
       hosts:
         DB:
-          ansible_host: 15.165.122.244
+          ansible_host: 3.129.191.209
     lb_servers:
       hosts:
         LB:
-          ansible_host: 15.164.202.248
+          ansible_host: 3.13.1.226
     web_servers:
       hosts:
         WEB:
-          ansible_host: 3.36.142.218
+          ansible_host: 3.21.200.89
   vars:
-    ansible_ssh_private_key_file: ./app_key.pem
+    ansible_ssh_private_key_file: ../app_key.pem
     ansible_ssh_common_args: -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
     ansible_user: ubuntu
     app_name: Test

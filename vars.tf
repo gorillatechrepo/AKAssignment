@@ -1,6 +1,6 @@
 variable "aws_region" {
   type    = string
-  default = "ap-northeast-2"
+  default = "us-east-2"
 }
 
 variable "instance_type" {
@@ -10,7 +10,7 @@ variable "instance_type" {
 
 variable "workstation_ip" {
   type = string
-  default = "13.49.41.254"
+  default = "68.201.253.153"
 }
 
 variable "ami_key_pair_name" {
@@ -20,5 +20,10 @@ variable "ami_key_pair_name" {
 
 variable "instance_ami"{
   type = string
-  default = "ami-030e520ec063f6467"
+  default = "ami-0984b842ee24d45f1"
+}
+
+variable "availability_zone"{
+  type = string
+  default = "us-east-2a"
 }
