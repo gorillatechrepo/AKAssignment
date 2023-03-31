@@ -8,7 +8,7 @@ This task was quite enjoyable, albeit it presented a few challenges during deplo
 -   Due to insufficient user permissions, some tasks in the playbook were not executable. To rectify this issue, we added **become: yes** to the tasks.
 - The Web server wouldn't connect to MongoDB. I used telnet from the webserver to test that the port was litening and was refused. I validated the iptables and that the MongoDB service was started. After looking at the mongodb.conf file I noticed the binding was set to 127.0.0.1. I modified the playbook to change the config to the appropriate setting.
 - The playbook also had syntax errors in the *lb.j2* file that caused the nginx lb config to be incorrect.
-- The playbook was not pointing to the local nginx.conf file. This caused errors with pid
+- The playbook was not pointing to the local nginx.conf file. This caused errors with pid.
 
 
 
