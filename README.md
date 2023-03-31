@@ -17,3 +17,4 @@ This task was quite enjoyable, albeit it presented a few challenges during deplo
 
 -   To improve readability, I created multiple terraform files that any DevOps engineer could effortlessly navigate to locate relevant information.
 -   I assigned variables to areas that would require future modifications, thus enhancing the code's flexibility to suit user needs.
+-   I chose to omit the app_key for secuirty reasons. This script will work on asll regions assuming the variables are define correctly, a new app_key is generated and the inventory.yml file is updated with the appropriate public ip addresses.
