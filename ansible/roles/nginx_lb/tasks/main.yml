@@ -17,8 +17,8 @@
 
   - name: Copy nginx configuration files
     copy:
-      src: nginx/
-      dest: /etc/nginx
+      src: files/nginx/nginx.conf
+      dest: /etc/nginx/
     notify: reload nginx
     become: yes
 
